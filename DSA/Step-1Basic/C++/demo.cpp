@@ -460,22 +460,43 @@ using namespace std;
     //     }
     // }
 
-    void print16( int n){
-        for(int i=0;i<n;i++){
-            for(int j =0;j<n;j++){
-              if(i==0 || j==0 || i == n-1 || j== n-1){
-                cout << "*";
-              }else cout << " ";
-            }
-            cout << endl;
-        }
-    }
+    // void print16( int n){
+    //     for(int i=0;i<n;i++){
+    //         for(int j =0;j<n;j++){
+    //           if(i==0 || j==0 || i == n-1 || j== n-1){
+    //             cout << "*";
+    //           }else cout << " ";
+    //         }
+    //         cout << endl;
+    //     }
+    // }
 
-int main(){
-    int x;
-    cin >> x;
-    print16(x);
+// int main(){
+//     int x;
+//     cin >> x;
+//     print16(x);
 
+// }
+
+void explainSet(){
+  set<int>st;
+  st.insert(1); 
+  st.emplace(2);
+  st.insert(3);
+  auto it= st.find(3);
+   st.erase(1);
+
+      for (int val : st) {
+         cout << val << " ";
+       }
+
+    cout << endl;
+
+  
+}
+
+int main() {
+    explainSet();
 }
 
 

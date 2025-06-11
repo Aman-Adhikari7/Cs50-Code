@@ -99,29 +99,61 @@ using namespace std;
 //     cout << endl;  
 // }
 
- int checkPrime(int x){
-      int counter=0;
-    for(int i=1; i*i<=x;i++){
+//  int checkPrime(int x){
+//       int counter=0;
+//     for(int i=1; i*i<=x;i++){
         
-        if(x% i ==0){
-           counter++;
-        }
-        if((x/i) !=i){
-            counter++;
-        }
+//         if(x% i ==0){
+//            counter++;
+//         }
+//         if((x/i) !=i){
+//             counter++;
+//         }
         
-    }
-    if(counter == 2){
-            cout << true;
-        } else cout << false;
- }
+//     }
+//     if(counter == 2){
+//             cout << true;
+//         } else cout << false;
+//  }
+
+
+//  int GCD(int n1,int n2){
+     
+//     for(int i=min(n1,n2);i>=1;i--){
+//         if(n1 % i == 0 && n2 % i == 0){
+//             cout << i;
+//             break;
+//         }
+//     }
+//  }
+
+int gcdAlgo(int x,int y){
+      int num1 = x;
+      int num2 =y;
+        int gcd;
+     while (num1 >0 && num2 >0){
+
+        if(num1 > num2){
+            num1= num1% num2;
+        }else if(num2 > num1){
+             num2 = num2% num1;
+        }
+     }
+     if( num1 ==0){
+        cout << num2;
+     }else if( num2 == 0){
+        cout << num1;
+     }
+
+}
   
 
 
 int main() {
-    int num = 3;
+    int num1 = 52;
+    int num2 = 10;
 
-    checkPrime(num);
+    gcdAlgo(num1,num2);
 
     return 0;
 }
